@@ -1,4 +1,4 @@
-package dev.ropimasi.curso.especialistajava.modulo1;
+package dev.ropimasi.curso.especialistajava.modulo01;
 
 public class Principal {
 	public static void main(String[] args) {
