@@ -1,13 +1,19 @@
 package dev.ropimasi.curso.especialistajava.modulo07.desafio_05;
 
+import java.util.Objects;
 
 public class Televisor {
 
-	Integer canal = 130;
-	Integer volume = 20;
+	private static final int VOLUME_PADRAO = 20;
+	private static final int CANAL_PADRAO = 130;
+	
+	Integer canal = CANAL_PADRAO;
+	Integer volume = VOLUME_PADRAO;
 
 	void mudarCanal(Integer novoCanal) {
-		if (canal == novoCanal) {
+		Objects.requireNonNull(novoCanal, "Canal não pode ser nulo!");		
+		
+		if (canal.equals(novoCanal)) {
 			System.out.println("Novo canal é também o canal atual.");
 		} else {
 			canal = novoCanal;
@@ -16,10 +22,12 @@ public class Televisor {
 	}
 
 	void mudarVolume(Integer novoVolume) {
-		if (novoVolume == volume) {
+		Objects.requireNonNull(novoVolume, "Volume não pode ser nulo!");
+		
+		if (novoVolume.equals(volume)) {
 			System.out.println("Novo volume é também o volume atual.");
 		} else {
-			volume = Integer.valueOf(novoVolume.byteValue());
+			volume = novoVolume;
 			System.out.println("Volume alterado para " + volume);
 		}
 	}
