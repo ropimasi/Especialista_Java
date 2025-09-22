@@ -1,3 +1,5 @@
+package dev.ropimasi.curso.especialistajava.modulo05.desafio_41;
+
 public class NumeroUtil {
 
     static int descobrirMaior(int a, int b) {

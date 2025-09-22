@@ -1,3 +1,5 @@
+package dev.ropimasi.curso.especialistajava.modulo05.desafio_07;
+
 public class Principal {
 
     public static void main(String[] args) {

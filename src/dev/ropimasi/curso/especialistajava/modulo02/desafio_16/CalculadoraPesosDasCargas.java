@@ -1,3 +1,5 @@
+package dev.ropimasi.curso.especialistajava.modulo02.desafio_16;
+
 public class CalculadoraPesosDasCargas {
 
   public static void main(String[] args) {

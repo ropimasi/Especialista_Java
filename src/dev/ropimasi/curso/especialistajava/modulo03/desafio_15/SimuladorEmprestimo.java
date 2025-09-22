@@ -1,3 +1,5 @@
+package dev.ropimasi.curso.especialistajava.modulo03.desafio_15;
+
 import java.util.Scanner;
 
 public class SimuladorEmprestimo {

@@ -1,3 +1,5 @@
+package dev.ropimasi.curso.especialistajava.modulo02.desafio_23;
+
 import java.util.Scanner;
 
 public class FolhaPagamento {

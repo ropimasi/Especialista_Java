@@ -1,3 +1,5 @@
+package dev.ropimasi.curso.especialistajava.modulo05.desafio_35;
+
 public class AreasPrincipal {
     public static void main(String[] args) {
         double lado = 2;

@@ -1,3 +1,5 @@
+package dev.ropimasi.curso.especialistajava.modulo02.desafio_18;
+
 public class CalculadoraIdadeMedia {
 
   public static void main(String[] args) {
