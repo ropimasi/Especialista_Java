@@ -1,0 +1,11 @@
+package dev.ropimasi.curso.especialistajava.modulo05.desafio_25;
+public class Funcionario3 {
+
+    String nome;
+    int quantidadeFilhos;
+
+    boolean possuiFilhos() {
+        return quantidadeFilhos > 0;
+    }
+
+}
