@@ -4,14 +4,14 @@ public class Calendario {
 
 	static String obterNomeMes(int numeroMes) {
 		
-		if (numeroMes < 0 || numeroMes > 11) {
+		if (numeroMes < 1 || numeroMes > 12) {
 			throw new IllegalArgumentException("Número do mês inválido: " + numeroMes);
 		}
 		
 		String[] meses = { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro",
 				"Outubro", "Novembro", "Dezembro" };
 		
-		return meses[numeroMes];
+		return meses[numeroMes-1];
 	}
 
 
