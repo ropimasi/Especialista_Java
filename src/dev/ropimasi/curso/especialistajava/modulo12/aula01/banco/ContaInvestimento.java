@@ -1,11 +1,26 @@
 package dev.ropimasi.curso.especialistajava.modulo12.aula01.banco;
 
-public class Conta {
+public class ContaInvestimento {
 
 	private Titular titular;
 	private int agencia;
 	private int numero;
 	private double saldo;
+	private double valorTotalRendimentos;
+
+
+
+	public double getValorTotalRendimentos() {
+		return valorTotalRendimentos;
+	}
+
+
+
+	public void creditarRendimentos(double percentualJuros) {
+		double valorRendimentos = getSaldo() * percentualJuros / 100;
+		this.valorTotalRendimentos += valorRendimentos;
+		depositar(valorRendimentos);
+	}
 
 
 

@@ -13,23 +13,17 @@ public class Principal1 {
 		conta1.setTitular(new Titular("joão da Silva", "12345678900"));
 		conta1.setAgencia(1234);
 		conta1.setNumero(999999);
-		conta1.setTipo(Conta.NORMAL);
-//		conta1.setLimiteChequeEspecial(1000); // exception.
-		
+
 		conta1.imprimirDemonstrativo();
-		
+
 		conta1.depositar(200);
-		
+
 		conta1.imprimirDemonstrativo();
-		
+
 		conta1.sacar(89.50);
 
 		conta1.imprimirDemonstrativo();
-		
-//		conta1.creditarRendimentos(3); // exception.
-		
-		conta1.imprimirDemonstrativo();
-		
+
 	}
 
 }

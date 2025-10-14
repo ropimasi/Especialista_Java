@@ -1,11 +1,29 @@
 package dev.ropimasi.curso.especialistajava.modulo12.aula01.banco;
 
-public class Conta {
+public class ContaEspecial {
 
 	private Titular titular;
 	private int agencia;
 	private int numero;
 	private double saldo;
+
+	private double valorTotalRendimentos;
+	private double tarifaMensal;
+	private double limiteChequeEspecial;
+
+
+
+	public double getValorTotalRendimentos() {
+		return valorTotalRendimentos;
+	}
+
+
+
+	public void creditarRendimentos(double percentualJuros) {
+		double valorRendimentos = getSaldo() * percentualJuros / 100;
+		this.valorTotalRendimentos += valorRendimentos;
+		depositar(valorRendimentos);
+	}
 
 
 
@@ -51,12 +69,42 @@ public class Conta {
 
 
 
+	public double getSaldoDisponivel() {
+		return getSaldo() + getLimiteChequeEspecial();
+	}
+
+
+
+	public double getTarifaMensal() {
+		return tarifaMensal;
+	}
+
+
+
+	public void setTarifaMensal(double tarifaMensal) {
+		this.tarifaMensal = tarifaMensal;
+	}
+
+
+
+	public double getLimiteChequeEspecial() {
+		return limiteChequeEspecial;
+	}
+
+
+
+	public void setLimiteChequeEspecial(double limiteChequeEspecial) {
+		this.limiteChequeEspecial = limiteChequeEspecial;
+	}
+
+
+
 	public void sacar(double valorSaque) {
 		if (valorSaque <= 0) {
 			throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
 		}
-		if (valorSaque > getSaldo()) {
-			throw new IllegalArgumentException("Saldo insuficiente para saque: " + getSaldo());
+		if (valorSaque > getSaldoDisponivel()) {
+			throw new IllegalArgumentException("Saldo insuficiente para saque: " + getSaldoDisponivel());
 		}
 		saldo -= valorSaque;
 	}
@@ -72,12 +120,19 @@ public class Conta {
 
 
 
+	public void debitarTarifaMensal() {
+		sacar(getTarifaMensal());
+	}
+
+
+
 	public void imprimirDemonstrativo() {
 		System.out.printf("------------------------%n");
 		System.out.printf("Agência: %d%n", getAgencia());
 		System.out.printf("Número da Conta: %d%n", getNumero());
 		System.out.printf("Titular: %s%n", titular.getNome());
 		System.out.printf("Saldo: R$ %.2f%n", getSaldo());
+		System.out.printf("Saldo disponível: R$ %.2f%n", getSaldoDisponivel());
 		System.out.printf("------------------------%n");
 	}
 
