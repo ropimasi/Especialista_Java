@@ -45,7 +45,6 @@ public class ContaEspecial extends ContaInvestimento {
 
 	@Override
 	public void imprimirDemonstrativo() {
-		/*super.imprimirDemonstrativo(); não utilizar este nesta aula. */
 		System.out.printf("------------------------%n");
 		System.out.printf("Agência: %d%n", getAgencia());
 		System.out.printf("Número da Conta: %d%n", getNumero());
@@ -58,16 +57,10 @@ public class ContaEspecial extends ContaInvestimento {
 
 
 	@Override
-	public void sacar(double valorSaque) {
-		/*super.sacar(valorSaque);  não utilizar este nesta aula. */
-		if (valorSaque <= 0) {
-			throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
-		}
+	protected void validarSaldoParaSaque(double valorSaque) {
 		if (valorSaque > getSaldoDisponivel()) {
-			throw new IllegalArgumentException("Saldo insuficiente para saque: " + getSaldoDisponivel());
+			throw new IllegalArgumentException("Saldo insuficiente para saque: " + getSaldo());
 		}
-		saldo -= valorSaque;
-
 	}
 
 }

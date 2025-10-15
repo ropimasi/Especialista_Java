@@ -51,13 +51,27 @@ public class Conta {
 
 
 
+	protected void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+
+
+	protected void validarSaldoParaSaque(double valorSaque) {
+		if (valorSaque > getSaldo()) {
+			throw new IllegalArgumentException("Saldo insuficiente para saque: " + getSaldo());
+		}
+	}
+
+
+
 	public void sacar(double valorSaque) {
 		if (valorSaque <= 0) {
 			throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
 		}
-		if (valorSaque > getSaldo()) {
-			throw new IllegalArgumentException("Saldo insuficiente para saque: " + getSaldo());
-		}
+
+		validarSaldoParaSaque(valorSaque);
+
 		saldo -= valorSaque;
 	}
 
