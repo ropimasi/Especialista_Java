@@ -1,8 +1,14 @@
 package dev.ropimasi.curso.especialistajava.modulo12.aula09.banco;
 
-public class ContaInvestimento extends Conta{
+public class ContaInvestimento extends Conta {
 
 	private double valorTotalRendimentos;
+
+
+
+	public ContaInvestimento() {
+		super(0);
+	}
 
 
 

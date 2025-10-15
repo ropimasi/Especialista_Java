@@ -7,6 +7,11 @@ public class ContaEspecial extends ContaInvestimento {
 
 
 
+	public ContaEspecial() {
+	}
+
+
+
 	public double getTarifaMensal() {
 		return tarifaMensal;
 	}
@@ -46,7 +51,7 @@ public class ContaEspecial extends ContaInvestimento {
 	@Override
 	public void imprimirDemonstrativo() {
 		super.imprimirDemonstrativo();
-		
+
 		System.out.printf("Saldo disponível: R$ %.2f%n", getSaldoDisponivel());
 	}
 

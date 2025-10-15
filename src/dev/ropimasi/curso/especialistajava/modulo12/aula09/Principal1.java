@@ -9,7 +9,7 @@ import dev.ropimasi.curso.especialistajava.modulo12.aula09.banco.Titular;
 public class Principal1 {
 
 	public static void main(String[] args) {
-		Conta conta1 = new Conta();
+		Conta conta1 = new Conta(0);
 		conta1.setTitular(new Titular("joão da Silva", "12345678900"));
 		conta1.setAgencia(1234);
 		conta1.setNumero(999999);
