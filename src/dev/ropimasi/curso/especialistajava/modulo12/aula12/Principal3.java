@@ -36,6 +36,7 @@ public class Principal3 {
 
 		conta3.imprimirDemonstrativo();
 
+		System.out.println(conta3);
 	}
 
 }

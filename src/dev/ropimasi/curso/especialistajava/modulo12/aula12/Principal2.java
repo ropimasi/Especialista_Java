@@ -26,6 +26,7 @@ public class Principal2 {
 
 		conta2.imprimirDemonstrativo();
 
+		System.out.println(conta2);
 	}
 
 }

@@ -66,4 +66,12 @@ public class ContaEspecial extends ContaInvestimento {
 		}
 	}
 
+
+
+	@Override
+	public String toString() {
+		return "ContaEspecial [tarifaMensal=" + tarifaMensal + ", limiteChequeEspecial=" + limiteChequeEspecial + "] "
+				+ super.toString();
+	}
+
 }

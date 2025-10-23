@@ -24,4 +24,11 @@ public class ContaInvestimento extends Conta {
 		depositar(valorRendimentos);
 	}
 
+
+
+	@Override
+	public String toString() {
+		return "ContaInvestimento [valorTotalRendimentos=" + valorTotalRendimentos + "] " + super.toString();
+	}
+
 }

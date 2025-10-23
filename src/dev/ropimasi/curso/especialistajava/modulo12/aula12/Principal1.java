@@ -23,6 +23,7 @@ public class Principal1 {
 
 		conta1.imprimirDemonstrativo();
 
+		System.out.println(conta1);
 	}
 
 }
