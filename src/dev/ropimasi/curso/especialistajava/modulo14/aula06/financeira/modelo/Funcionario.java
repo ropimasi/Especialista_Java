@@ -1,15 +1,30 @@
 package dev.ropimasi.curso.especialistajava.modulo14.aula06.financeira.modelo;
 
-public class Funcionario extends EmpresaFinanciavel {
+public class Funcionario implements ClienteFinanciavel {
 
 	private static final int QUANTIDADE_SALARIO_LIMITE_CREDITO = 5;
+
+	private String nome;
 	private double salarioMensal;
 
 
 
 	public Funcionario(String nome, double salarioMensal) {
-		super(nome, 0);
+		super();
+		this.nome = nome;
 		this.salarioMensal = salarioMensal;
+	}
+
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 

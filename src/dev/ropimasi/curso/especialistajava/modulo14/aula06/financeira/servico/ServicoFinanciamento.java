@@ -1,14 +1,14 @@
 package dev.ropimasi.curso.especialistajava.modulo14.aula06.financeira.servico;
 
-import dev.ropimasi.curso.especialistajava.modulo14.aula06.financeira.modelo.EmpresaFinanciavel;
+import dev.ropimasi.curso.especialistajava.modulo14.aula06.financeira.modelo.ClienteFinanciavel;
 
 
 
 
 public class ServicoFinanciamento {
 
-	public void solicitarFinanciamento(EmpresaFinanciavel empresa, double valorSolicitado) {
-		double limiteAprovado = empresa.calcularLimiteAprovado();
+	public void solicitarFinanciamento(ClienteFinanciavel cliente, double valorSolicitado) {
+		double limiteAprovado = cliente.calcularLimiteAprovado();
 
 		if (limiteAprovado < valorSolicitado) {
 			throw new RuntimeException(
@@ -22,11 +22,11 @@ public class ServicoFinanciamento {
 
 
 
-	public double consultarLimiteAprovado(EmpresaFinanciavel empresa) {
+	public double consultarLimiteAprovado(ClienteFinanciavel cliente) {
 		// aqui poderia registrar a consulta em algum lugar para um consultor comercial entrar em contato
 		// com o cliente (não vamos fazer isso, porque o objetivo agora é estudar OO primeiro)
 
-		return empresa.calcularLimiteAprovado();
+		return cliente.calcularLimiteAprovado();
 	}
 
 }
