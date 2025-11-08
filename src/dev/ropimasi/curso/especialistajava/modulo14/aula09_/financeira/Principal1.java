@@ -1,5 +1,6 @@
 package dev.ropimasi.curso.especialistajava.modulo14.aula09_.financeira;
 
+import dev.ropimasi.curso.especialistajava.modulo14.aula09_.financeira.modelo.ClienteFinanciavel;
 import dev.ropimasi.curso.especialistajava.modulo14.aula09_.financeira.modelo.Fazenda;
 import dev.ropimasi.curso.especialistajava.modulo14.aula09_.financeira.modelo.Funcionario;
 import dev.ropimasi.curso.especialistajava.modulo14.aula09_.financeira.modelo.Industria;
@@ -9,7 +10,7 @@ import dev.ropimasi.curso.especialistajava.modulo14.aula09_.financeira.servico.S
 
 
 
-public class Principal {
+public class Principal1 {
 
 	public static void main(String[] args) {
 		var servicoFinanciamento = new ServicoFinanciamento();
@@ -24,6 +25,10 @@ public class Principal {
 		servicoFinanciamento.solicitarFinanciamento(lujinia, 123_000);
 		servicoFinanciamento.solicitarFinanciamento(funcionario, 75_000);
 
+		System.out.println(ClienteFinanciavel.isFinanciamentoPequenoValor(50_000));
+		System.out.println(ClienteFinanciavel.isFinanciamentoMedioValor(50_000));
+		
+		
 	}
 
 }

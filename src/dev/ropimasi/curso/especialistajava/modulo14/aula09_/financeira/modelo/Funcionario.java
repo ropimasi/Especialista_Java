@@ -1,6 +1,6 @@
 package dev.ropimasi.curso.especialistajava.modulo14.aula09_.financeira.modelo;
 
-public class Funcionario implements ClienteFinanciavel {
+public class Funcionario implements PessoaBonificavel {
 
 	private static final int QUANTIDADE_SALARIO_LIMITE_CREDITO = 5;
 
@@ -38,6 +38,13 @@ public class Funcionario implements ClienteFinanciavel {
 	@Override
 	public double calcularLimiteAprovado() {
 		return getSalarioMensal() * QUANTIDADE_SALARIO_LIMITE_CREDITO;
+	}
+
+
+
+	@Override
+	public double calcularBonus(double percentualMetaAlcancada) {
+		return getSalarioMensal() * percentualMetaAlcancada / 100;
 	}
 
 }
