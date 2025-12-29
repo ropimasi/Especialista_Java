@@ -25,10 +25,10 @@ public class Principal1 {
 			try {
 				System.out.print("Quantidade: ");
 				int quantidade = sc.nextInt();
-
+			
 				efetuarBaixaEstoque(produto, quantidade);
 				System.out.println("Compra efetuada com sucesso!");
-
+			
 				break;
 			} catch (IllegalArgumentException iae) {
 				iae.printStackTrace(); // usado geralmente em ambiente dev ou debug, não em produção.
