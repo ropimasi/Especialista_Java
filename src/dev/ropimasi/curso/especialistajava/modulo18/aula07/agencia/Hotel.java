@@ -1,4 +1,4 @@
-package dev.ropimasi.curso.especialistajava.modulo18.aula04.agencia;
+package dev.ropimasi.curso.especialistajava.modulo18.aula07.agencia;
 
 import java.util.Objects;
 
@@ -52,7 +52,23 @@ public class Hotel {
                 '}';
     }
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(cidade, nome);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Hotel other = (Hotel) obj;
+		return Objects.equals(cidade, other.cidade) && Objects.equals(nome, other.nome);
+	}
     
     
-    
+
 }
