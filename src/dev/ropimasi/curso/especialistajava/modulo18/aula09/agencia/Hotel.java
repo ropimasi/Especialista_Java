@@ -1,0 +1,74 @@
+package dev.ropimasi.curso.especialistajava.modulo18.aula09.agencia;
+
+import java.util.Objects;
+
+public class Hotel {
+
+    private String nome;
+    private String cidade;
+    private double precoDiaria;
+
+    public Hotel(String nome, String cidade, double precoDiaria) {
+        setNome(nome);
+        setCidade(cidade);
+        setPrecoDiaria(precoDiaria);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        Objects.requireNonNull(nome);
+        this.nome = nome;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public double getPrecoDiaria() {
+        return precoDiaria;
+    }
+
+    public void setPrecoDiaria(double precoDiaria) {
+        if (precoDiaria < 0) {
+            throw new IllegalArgumentException("Preço da diária não pode ser negativo");
+        }
+
+        this.precoDiaria = precoDiaria;
+    }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "nome='" + nome + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", precoDiaria=" + precoDiaria +
+                '}';
+    }
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cidade, nome);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Hotel other = (Hotel) obj;
+		return Objects.equals(cidade, other.cidade) && Objects.equals(nome, other.nome);
+	}
+    
+    
+
+}
