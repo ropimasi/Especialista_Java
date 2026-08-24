@@ -1,5 +1,6 @@
 package dev.ropimasi.curso.especialistajava.modulo18.aula16;
 
+import java.util.Arrays;
 import java.util.List;
 import dev.ropimasi.curso.especialistajava.modulo18.aula16.agencia.CadastroHotel;
 import dev.ropimasi.curso.especialistajava.modulo18.aula16.agencia.Hotel;
@@ -16,8 +17,11 @@ public class Principal {
 		cadastro.adicionar("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
 		cadastro.adicionar("Mercure", "Uberlândia/MG", 400);
 
-		List<Hotel> hoteis = cadastro.obterTodos();
-		imprimirHoteis(hoteis);
+//		List<Hotel> hoteis = cadastro.obterTodos();
+//		imprimirHoteis(hoteis);
+		
+		Hotel[] hoteis = cadastro.obterTodosComoArray();
+		System.out.println("Todos os hotéis cadastrados:" + Arrays.toString(hoteis));
 	}
 
 
