@@ -13,13 +13,13 @@ public class Principal {
 		cadastro.adicionar("Disney (10 noites)", 20_000);
 		cadastro.adicionar("Natal Luz em Gramado (5 noites)", 8_500);
 
-		//        cadastro.removerPorDescricao("Disney (7 noites)");
+//		cadastro.removerPorDescricao("Disney (10 noites)");
 
-		//        cadastro.ordenar();
-		//        cadastro.ordenarPorPrecoDecrescente();
+		cadastro.ordenar();
+		cadastro.ordenarPorPrecoDecrescente();
 
-		//        PacoteViagem pacoteEncontrado = cadastro.buscarPorDescricao("Disney (7 noites)");
-		//        System.out.println(pacoteEncontrado);
+		PacoteViagem pacoteEncontrado = cadastro.buscarPorDescricao("Disney (10 noites)");
+		System.out.println(pacoteEncontrado);
 
 		imprimirPacotes(cadastro.obterTodos());
 	}
@@ -27,6 +27,7 @@ public class Principal {
 
 	private static void imprimirPacotes(List<PacoteViagem> pacotes) {
 		// TODO iterar nos pacotes e imprimir descrição e preço
+		pacotes.forEach(pacote -> System.out.println(pacote.getDescricao() + " - R$ " + pacote.getPrecoPorPessoa()));
 	}
 
 }

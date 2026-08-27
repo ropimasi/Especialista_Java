@@ -4,7 +4,7 @@ import java.util.Objects;
 
 
 
-public class PacoteViagem {
+public class PacoteViagem implements Comparable<PacoteViagem> {
 
 	private String descricao;
 	private double precoPorPessoa;
@@ -47,8 +47,32 @@ public class PacoteViagem {
 		return "PacoteViagem{" + "descricao='" + descricao + '\'' + ", precoPorPessoa=" + precoPorPessoa + '}';
 	}
 
-	// TODO implementar equals e hashCode
 
 	// TODO implementar compareTo
+	@Override
+	public int compareTo(PacoteViagem arg0) {
+		return this.descricao.compareTo(arg0.descricao);
+	}
+
+
+	// TODO implementar equals e hashCode
+	@Override
+	public int hashCode() {
+		return Objects.hash(descricao);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PacoteViagem other = (PacoteViagem) obj;
+		return Objects.equals(descricao, other.descricao);
+	}
+
 
 }
