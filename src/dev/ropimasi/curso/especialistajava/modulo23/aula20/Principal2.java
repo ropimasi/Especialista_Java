@@ -15,6 +15,12 @@ public class Principal2 {
 		System.out.println("Dia da semana daqui a 15 dias (DayOfWeek): " + diaDaSemanaQuinzeDias1);
 		System.out.println("Dia da semana 15 dias atras (LocalDate): " + diaDaSemanaQuinzeDias2);
 		
+		// Comparando os dois resultados
+		if (diaDaSemanaQuinzeDias1.equals(diaDaSemanaQuinzeDias2)) {
+			System.out.println("Os dois resultados são iguais.");
+		} else {
+			System.out.println("Os dois resultados são diferentes.");
+		}
 	}
 
 }
