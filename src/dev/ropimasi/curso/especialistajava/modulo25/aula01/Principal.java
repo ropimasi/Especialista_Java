@@ -18,8 +18,8 @@ public class Principal {
 
         Filtro<Cliente> filtro1 = new Filtro<Cliente>() {
             @Override
-            public boolean avaliarIdade(Cliente cliente) {
-                return cliente.getIdade() > 40;
+            public boolean avaliarIdade(Cliente objetoCliente) {
+                return objetoCliente.getIdade() > 40;
             }
 
 			@Override
