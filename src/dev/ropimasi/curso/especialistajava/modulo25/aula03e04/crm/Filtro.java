@@ -1,0 +1,8 @@
+package dev.ropimasi.curso.especialistajava.modulo25.aula03e04.crm;
+
+public interface Filtro<T> {
+
+    boolean avaliarIdade(T objeto);
+    boolean avaliarNomeContem(T objeto, String nomeParte);
+
+}
