@@ -13,7 +13,6 @@ public class Principal2 {
 		IntSupplier supplier = () -> 10;
 		IntConsumer consumer = num -> System.out.println("Número: " + num);
 		
-		
 		System.out.println(predicate.test(9));
 		System.out.println(function.apply(10));
 		System.out.println(supplier.getAsInt());
